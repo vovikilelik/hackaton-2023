@@ -1,2 +1,2 @@
 export * from './library';
-export * from './library copy';
+export * from './cources';
