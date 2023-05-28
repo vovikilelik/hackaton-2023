@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { Header } from './ui/header';
 import { SwipeContainer } from '../../../share/ui';
 import { useAuth } from '../../../api/auth/useAuth';
-import { Cources, News, UserAccount } from './ui';
+import { Cources, GroupAccount, News, Teacher, UserAccount } from './ui';
 import { School } from './ui/school';
 
 import styles from './Main.module.less';
@@ -21,8 +21,8 @@ const User: React.FC = ({}) => {
 const Group: React.FC = ({}) => {
   return (
     <SwipeContainer activeIndex={2} className={styles.content}>
-      <div key='foo'>foo</div>
-      <div key='moo'>moo</div>
+      <Teacher />
+      <GroupAccount />
       <News />
       <Cources />
     </SwipeContainer>
