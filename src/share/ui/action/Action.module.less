@@ -1,0 +1,19 @@
+:local {
+  .active {
+    transition: background-color 0.25s;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(deepskyblue, 0.125);
+    }
+
+    &:active {
+      background: rgba(deepskyblue, 0.25);
+    }
+  }
+
+  .disabled > * {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

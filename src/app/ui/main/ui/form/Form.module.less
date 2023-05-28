@@ -1,0 +1,22 @@
+:local {
+
+  .layout {
+
+    & > *:not(:first-child) {
+      z-index: 0;
+    }
+  }
+
+  .title {
+    padding: 8px 16px;
+    font-size: 150%;
+    font-weight: bold;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+
+    background: whitesmoke;
+  }
+}

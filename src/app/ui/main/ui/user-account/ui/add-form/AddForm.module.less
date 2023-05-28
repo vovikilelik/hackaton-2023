@@ -1,0 +1,23 @@
+:local {
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .segmented {
+
+    font-size: 24px;
+    padding: 16px;
+
+    :global {
+
+      .ant-segmented-item-selected, .ant-segmented-thumb, {
+        background: skyblue;
+        outline: 1px solid deepskyblue;
+      }
+    }
+  }
+}

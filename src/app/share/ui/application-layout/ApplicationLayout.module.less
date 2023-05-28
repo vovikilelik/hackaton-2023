@@ -1,0 +1,27 @@
+:local {
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toolbar {
+    background: whitesmoke;
+    outline: 1px solid lightgray;
+  }
+
+  .viewer {
+    position: relative;
+
+    &Busy {
+      opacity: 0.25;
+      pointer-events: none;
+      transition: 0.5s opacity;
+    }
+
+    &Progress {
+      z-index: 1;
+      position: absolute;
+      height: 4px;
+    }
+  }
+}

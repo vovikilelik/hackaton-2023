@@ -1,0 +1,35 @@
+:local {
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toolbar {
+    padding: 16px;
+  }
+
+  .content {
+    display: flex;
+
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 16px;
+  }
+
+  .modal {
+
+    :global {
+
+      .ant-modal-content {
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .ant-modal-body {
+        display: flex;
+      }
+    }
+  }
+}

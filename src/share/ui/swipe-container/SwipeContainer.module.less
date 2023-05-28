@@ -1,0 +1,29 @@
+:local {
+  
+  .layout {
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .wrapper {
+    position: absolute;
+    height: 100%;
+
+    display: flex;
+
+    transition: all 0.3s;
+
+    &:active {
+      transition: none;
+    }
+
+    & > * {
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+:local {
+  .layout {
+    display: flex;
+
+    & > * {
+      position: relative;
+    }
+
+    & > *:not(:first-child)::before {
+      content: '';
+      position: absolute;
+
+      left: 0;
+      top: 15%;
+      bottom: 15%;
+
+      width: 1px;
+
+      background: lightgrey;
+    }
+  }
+
+  .item {
+    display: flex;
+    padding: 0 0.5em;
+
+    &Selected {
+      background: white;
+      outline: 1px solid silver;
+      margin-bottom: -2px;
+      box-shadow: 3px 2px 0px 0 silver;
+    }
+
+    :global {
+      .ant-btn {
+        padding: 4px;
+        height: unset;
+        line-height: 1;
+        background: unset;
+      }
+
+      .anticon {
+        display: flex;
+      }
+    }
+  }
+
+  .group {
+    display: flex;
+    padding: 0 0.5em;
+  }
+}

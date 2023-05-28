@@ -1,0 +1,70 @@
+:local {
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .comments {
+
+    display: flex;
+    flex-direction: column;
+      
+    & > * {
+      border-top: 1px dashed silver;
+    }
+
+    &Item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      padding: 8px;
+
+      &Selected {
+        background: lightyellow;
+      }
+    }
+
+    &Info {
+      opacity: 0.5;
+    }
+  }
+
+  .points {
+    position: relative;
+
+    &Area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &Item {
+      position: absolute;
+
+      width: 30px;
+      height: 30px;
+
+      border-radius: 30px;
+      border: 6px solid black;
+      outline: 3px solid yellow;
+      outline-offset: -4px;
+
+      transition: all 0.5s;
+
+      &Selected {
+        transform: scale(1.25);
+      }
+    }
+  }
+
+  .image {
+    object-fit: cover;
+    outline: 1px solid black;
+  }
+}

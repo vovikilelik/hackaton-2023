@@ -1,0 +1,13 @@
+:local {
+  .layout {
+    display: flex;
+
+    & > * {
+      outline: 1px solid silver;
+    }
+
+    &::after {
+      content: '‣';
+    }
+  }
+}
