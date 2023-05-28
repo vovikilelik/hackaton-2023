@@ -13,7 +13,7 @@ export interface PosterProps extends ClassName {
 }
 
 export const Poster: React.FC<PosterProps> = ({ className, value }) => {
-  const { title, image, author, marks } = value;
+  const { title, description, image, author, marks } = value;
 
   const rate = useMemo(() => {
     if (!marks) {
@@ -29,6 +29,7 @@ export const Poster: React.FC<PosterProps> = ({ className, value }) => {
       <Image className={styles.image} src={image || ''} />
       <div className={styles.content}>
         <div className={styles.title}>{title}</div>
+        <div className={styles.description}>{description}</div>
         <div className={styles.info}>
           <Badge count={marks?.length || 0}><CommentOutlined /></Badge>
           <Rate value={rate} />
